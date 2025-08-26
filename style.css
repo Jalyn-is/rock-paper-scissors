@@ -1,0 +1,11 @@
+* {
+    background-color: rgb(43, 19, 78);
+    color: aliceblue;
+}
+
+h1, p{
+    display: flex;
+    justify-content: center;
+}
+
+/* Basic CSS */
