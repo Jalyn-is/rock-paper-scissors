@@ -10,12 +10,12 @@ function getComputerChoice (min, max){
     return options[Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)];
 }
 function getHumanChoice (){
-    const humanChoice = prompt('rock paper scissors?').toLowerCase().split(' ').join('')
+    const humanChoice = prompt('rock paper scissors?').toLowerCase();
     if (humanChoice === 'rock' || humanChoice === 'paper' || humanChoice === 'scissors') {
-        console.log()
+        return humanChoice
     } else {
-        prompt ('Invalid input')
+        return('Invalid input')
     }
-    return humanChoice;
 }
+
 
