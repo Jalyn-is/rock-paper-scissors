@@ -6,9 +6,7 @@ function getComputerChoice (min, max){
     const maxFloored = Math.floor(max);
     return options[Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)];
 }
-console.log(getComputerChoice(0,3));
-console.log(getComputerChoice(0,3));
-console.log(getComputerChoice(0,3));
 function getHumanChoice (){
-    
+   const choice = prompt('rock paper scissors?')
+   return choice; 
 }
