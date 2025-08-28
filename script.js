@@ -17,8 +17,21 @@ function getHumanChoice (){
         return('Invalid input')
     }
 }
-function playRound(computerChoice, humanChoice){
+function playRound(){
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
+     if (humanSelection === computerSelection) {
+    return `It's a tie! You both chose ${humanSelection}.`;
+  }
+  if (
+    (humanSelection === 'rock' && computerSelection === 'scissors') ||
+    (humanSelection === 'paper' && computerSelection === 'rock') ||
+    (humanSelection === "scissors" && computerSelection === "paper")
+  ) {
+    return `You win! ${humanSelection} beats ${computerSelection}.`;
+  } else {
+    return `You lose! ${computerSelection} beats ${humanSelection}.`;
+  }
 }
+console.log(playRound())
 
