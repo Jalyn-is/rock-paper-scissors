@@ -3,10 +3,10 @@
 const humanScore = 0;
 const computerScore =0;
 
-function getComputerChoice (min, max){ 
+function getComputerChoice (){ 
     const computerChoice = ['rock' , 'paper' , 'scissors']
-    const minCeiled = Math.ceil(min);
-    const maxFloored = Math.floor(max);
+    const minCeiled = Math.ceil(0);
+    const maxFloored = Math.floor(3);
     return computerChoice[Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)];
 }
 function getHumanChoice (){
@@ -35,3 +35,4 @@ function playRound(){
 }
 console.log(playRound())
 
+//getComputer choice will return undefined due to it not having the apprpriate parameters. Will fix later.
