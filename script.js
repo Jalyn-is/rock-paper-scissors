@@ -1,7 +1,7 @@
 //console.log('hello wrld'); //The console works muhuhaha!
 
-const humanScore = 0;
-const computerScore =0;
+let humanScore = 0;
+let computerScore = 0;
 
 function getComputerChoice (){ 
     const computerChoice = ['rock' , 'paper' , 'scissors']
@@ -21,18 +21,20 @@ function playRound(){
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
      if (humanSelection === computerSelection) {
-    return `It's a tie! You both chose ${humanSelection}.`;
+    return `It's a tie! You both chose ${humanSelection}. Current score: You ${humanScore} Computer ${computerScore}`;
   }
   if (
     (humanSelection === 'rock' && computerSelection === 'scissors') ||
     (humanSelection === 'paper' && computerSelection === 'rock') ||
     (humanSelection === "scissors" && computerSelection === "paper")
   ) {
-    return `You win! ${humanSelection} beats ${computerSelection}.`;
+    humanScore++;
+    return `You win! ${humanSelection} beats ${computerSelection}. Current socre: You ${humanScore} - Computer ${computerScore}`;
   } else {
-    return `You lose! ${computerSelection} beats ${humanSelection}.`;
+    computerScore++;
+    return `You lose! ${computerSelection} beats ${humanSelection}. Current score: You ${humanScore} - Computer ${computerScore}`;
   }
-}
+} 
 console.log(playRound())
 
-//getComputer choice will return undefined due to it not having the apprpriate parameters. Will fix later.
+ 
